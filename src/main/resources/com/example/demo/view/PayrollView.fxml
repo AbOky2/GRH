@@ -1,0 +1,28 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.PayrollController" spacing="10" alignment="CENTER">
+    <!-- TableView -->
+    <TableView fx:id="payrollTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="ID Employé" fx:id="employeeIdColumn" />
+            <TableColumn text="Salaire Payé" fx:id="salaryPaidColumn" />
+            <TableColumn text="Date de Paiement" fx:id="paymentDateColumn" />
+        </columns>
+    </TableView>
+
+    <!-- Form -->
+    <HBox spacing="10">
+        <TextField fx:id="employeeIdField" promptText="ID Employé" />
+        <TextField fx:id="salaryField" promptText="Salaire Payé" />
+        <DatePicker fx:id="paymentDateField" promptText="Date de Paiement" />
+    </HBox>
+
+    <!-- Buttons -->
+    <HBox spacing="10">
+        <Button text="Ajouter Paie" onAction="#handleAddPayroll" />
+        <Button text="Modifier Paie" onAction="#handleUpdatePayroll" />
+        <Button text="Supprimer Paie" onAction="#handleDeletePayroll" />
+        <Button text="Rafraîchir" onAction="#handleRefresh" />
+    </HBox>
+</VBox>

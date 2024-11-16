@@ -1,0 +1,30 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.LeaveController" spacing="10" alignment="CENTER">
+    <!-- TableView -->
+    <TableView fx:id="leaveTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Type" fx:id="typeColumn" />
+            <TableColumn text="Date Début" fx:id="startDateColumn" />
+            <TableColumn text="Date Fin" fx:id="endDateColumn" />
+            <TableColumn text="Statut" fx:id="statusColumn" />
+        </columns>
+    </TableView>
+
+    <!-- Form -->
+    <HBox spacing="10">
+        <ComboBox fx:id="leaveTypeField" promptText="Type de Congé" />
+        <DatePicker fx:id="startDateField" promptText="Date Début" />
+        <DatePicker fx:id="endDateField" promptText="Date Fin" />
+        <ComboBox fx:id="statusField" promptText="Statut" />
+    </HBox>
+
+    <!-- Buttons -->
+    <HBox spacing="10">
+        <Button text="Ajouter Congé" onAction="#handleAddLeave" />
+        <Button text="Modifier Congé" onAction="#handleUpdateLeave" />
+        <Button text="Supprimer Congé" onAction="#handleDeleteLeave" />
+        <Button text="Rafraîchir" onAction="#handleRefresh" />
+    </HBox>
+</VBox>

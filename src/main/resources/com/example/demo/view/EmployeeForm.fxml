@@ -1,0 +1,19 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.example.demo.controller.EmployeeFormController"
+          hgap="10" vgap="10" alignment="CENTER">
+    <TextField fx:id="nomCompletField" promptText="Nom Complet" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <TextField fx:id="posteField" promptText="Poste" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <TextField fx:id="departementField" promptText="Département" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <TextField fx:id="emailField" promptText="Email" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    <TextField fx:id="salaireField" promptText="Salaire" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <DatePicker fx:id="dateEmbaucheField" promptText="Date d'embauche" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    <DatePicker fx:id="dateFinContratField" promptText="Date de fin de contrat" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    <TextField fx:id="typeContratField" promptText="Type de contrat" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    <Button text="Enregistrer" onAction="#handleSave" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <Button text="Annuler" onAction="#handleCancel" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+</GridPane>

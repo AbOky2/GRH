@@ -1,0 +1,111 @@
+/* Layout général */
+.main-layout {
+    -fx-background-color: #f9f9f9;
+}
+
+/* Header */
+.header {
+    -fx-background-color: #4caf50; /* Vert */
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 2);
+}
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    -fx-background-color: #333333; /* Gris foncé */
+    -fx-padding: 10;
+}
+
+.footer-text {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* Grid (Contenu principal) */
+.grid {
+    -fx-padding: 20;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+/* Cards */
+.card {
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #dddddd;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.5, 0, 2);
+    -fx-cursor: hand;
+    -fx-spacing: 10;
+    -fx-transition: all 0.3s ease;
+}
+.card:hover {
+    -fx-background-color: #f1f1f1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0.6, 0, 4);
+}
+
+.card-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.card-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+    -fx-text-alignment: center;
+}
+/* Style général */
+.view-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style pour le tableau */
+.employee-table {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-font-size: 14px;
+    -fx-selection-bar: #76c7c0;
+}
+
+/* Style pour les colonnes du tableau */
+.employee-table .table-column-header {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Boutons d'action */
+.action-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.action-button:hover {
+    -fx-background-color: #2980b9;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 1);
+}
+
+/* Style des lignes du tableau au survol */
+.employee-table .table-row-cell:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+

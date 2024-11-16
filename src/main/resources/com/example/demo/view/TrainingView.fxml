@@ -1,0 +1,28 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.TrainingController" spacing="10" alignment="CENTER">
+    <!-- TableView -->
+    <TableView fx:id="trainingTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Titre" fx:id="titleColumn" />
+            <TableColumn text="Description" fx:id="descriptionColumn" />
+            <TableColumn text="Durée (jours)" fx:id="durationColumn" />
+        </columns>
+    </TableView>
+
+    <!-- Form -->
+    <HBox spacing="10">
+        <TextField fx:id="titleField" promptText="Titre" />
+        <TextField fx:id="descriptionField" promptText="Description" />
+        <TextField fx:id="durationField" promptText="Durée (en jours)" />
+    </HBox>
+
+    <!-- Buttons -->
+    <HBox spacing="10">
+        <Button text="Ajouter Formation" onAction="#handleAddTraining" />
+        <Button text="Modifier Formation" onAction="#handleUpdateTraining" />
+        <Button text="Supprimer Formation" onAction="#handleDeleteTraining" />
+        <Button text="Rafraîchir" onAction="#handleRefresh" />
+    </HBox>
+</VBox>

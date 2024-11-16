@@ -1,0 +1,57 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.MainController" styleClass="main-layout">
+
+    <!-- Header -->
+    <top>
+        <HBox styleClass="header" spacing="10" alignment="CENTER_LEFT">
+            <ImageView fx:id="logo" fitHeight="50" fitWidth="50" />
+            <Label text="Application de Gestion RH" styleClass="header-title" />
+        </HBox>
+    </top>
+
+    <!-- Contenu principal -->
+    <center>
+        <GridPane hgap="20" vgap="20" alignment="CENTER" styleClass="grid">
+            <!-- Card: Gestion des Employés -->
+            <VBox styleClass="card" onMouseClicked="#openEmployeeView" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <ImageView fx:id="employeeIcon" fitHeight="60" fitWidth="60" />
+                <Label text="Gestion des Employés" styleClass="card-title" />
+                <Label text="Ajouter, modifier, et gérer les informations des employés." styleClass="card-description" />
+            </VBox>
+
+            <!-- Card: Gestion des Congés -->
+            <VBox styleClass="card" onMouseClicked="#openLeaveView" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <ImageView fx:id="leaveIcon" fitHeight="60" fitWidth="60" />
+                <Label text="Gestion des Congés" styleClass="card-title" />
+                <Label text="Planifiez et gérez les congés et absences." styleClass="card-description" />
+            </VBox>
+
+            <!-- Card: Suivi des Paies -->
+            <VBox styleClass="card" onMouseClicked="#openPayrollView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <ImageView fx:id="payrollIcon" fitHeight="60" fitWidth="60" />
+                <Label text="Suivi des Paies" styleClass="card-title" />
+                <Label text="Gérez les paiements et les salaires des employés." styleClass="card-description" />
+            </VBox>
+
+            <!-- Card: Gestion des Formations -->
+            <VBox styleClass="card" onMouseClicked="#openTrainingView" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <ImageView fx:id="trainingIcon" fitHeight="60" fitWidth="60" />
+                <Label text="Gestion des Formations" styleClass="card-title" />
+                <Label text="Suivez les formations des employés." styleClass="card-description" />
+            </VBox>
+        </GridPane>
+    </center>
+
+    <!-- Footer -->
+    <bottom>
+        <HBox styleClass="footer" alignment="CENTER">
+            <Label text="© 2024 Gestion RH. Tous droits réservés." styleClass="footer-text" />
+        </HBox>
+    </bottom>
+</BorderPane>
